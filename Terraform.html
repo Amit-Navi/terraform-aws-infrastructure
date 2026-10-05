@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provisioned by Terraform</title>
+<style>
+:root{--bg:#eef2f4;--ink:#14212b;--mute:#52636f;--line:#b9c6ce;--card:#fff;--acc:#1f5fd6}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1a22;--ink:#e6eef3;--mute:#93a6b3;--line:#2b3d4a;--card:#16242e;--acc:#6ea2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:56px 22px 72px}
+h1{font:600 clamp(2rem,6vw,3.2rem)/1.1 Georgia,"Iowan Old Style",serif;margin:0 0 14px;letter-spacing:-.02em}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 40px}
+.path{display:flex;flex-direction:column;gap:0;margin:0 0 44px}
+.layer{background:var(--card);border:1px solid var(--line);padding:14px 18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.layer+.layer{border-top:0}
+.layer:first-child{border-radius:10px 10px 0 0}
+.layer:last-child{border-radius:0 0 10px 10px;border-color:var(--acc);border-width:2px}
+.layer b{font-weight:600}
+.layer span{color:var(--mute);font-size:.92rem}
+h2{font:600 1.25rem Georgia,serif;margin:0 0 10px}
+dl{margin:0 0 40px;display:grid;grid-template-columns:max-content 1fr;gap:6px 24px}
+dt{color:var(--mute)}
+dd{margin:0;font-family:ui-monospace,Consolas,monospace;font-size:.95rem}
+p.note{color:var(--mute);font-size:.95rem;border-left:3px solid var(--acc);padding-left:14px;margin:0}
+code{font-family:ui-monospace,Consolas,monospace}
+</style>
+</head>
+<body>
+<main>
+<h1>This page was created by Terraform.</h1>
+<p class="lead">If you can read this, a Linux container running Nginx is serving a file that Terraform wrote to your local disk and mounted into the container.</p>
+
+<div class="path" role="list" aria-label="Request path">
+  <div class="layer" role="listitem"><b>Browser</b><span>http://localhost:8080</span></div>
+  <div class="layer" role="listitem"><b>Published port</b><span>host 8080 to container 80</span></div>
+  <div class="layer" role="listitem"><b>Docker network</b><span>private bridge network</span></div>
+  <div class="layer" role="listitem"><b>Nginx container</b><span>Linux, serves /usr/share/nginx/html</span></div>
+  <div class="layer" role="listitem"><b>Mounted folder</b><span>./site on your PC (local storage)</span></div>
+</div>
+
+<h2>What Terraform manages</h2>
+<dl>
+  <dt>Network</dt><dd>docker_network</dd>
+  <dt>Image</dt><dd>docker_image (nginx)</dd>
+  <dt>Container</dt><dd>docker_container</dd>
+  <dt>This file</dt><dd>local_file</dd>
+</dl>
+
+<p class="note">Edit the page text in Terraform, run <code>terraform apply</code>, and refresh. Run <code>terraform destroy</code> to remove everything.</p>
+</main>
+</body>
+</html>
